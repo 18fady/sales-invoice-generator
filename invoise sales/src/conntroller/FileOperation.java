@@ -136,6 +136,7 @@ public class FileOperation {
             Invoiceline line = new Invoiceline(itemname, itemprice, count);
             // identifying the total of each purchase and store it into array
             x[i] = line.gettot();
+            //summtion of total prices of each item in one value
             totalofall += x[i];
             // print each total beside his item
             pw2.append((      "  total price of  " + itemname + "  = " + x[i]));
@@ -153,6 +154,7 @@ public class FileOperation {
             pw2.append("\n");
         }
         pw2.append("\n");
+        //print the total item of all item prices together
         pw2.append(("Total of  " + header.getCustomerName() +  "  Invoice =  ") + totalofall);
         pw2.close();
 
